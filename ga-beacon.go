@@ -25,10 +25,6 @@ var (
 	pageTemplate = template.Must(template.New("page").ParseFiles("page.html"))
 )
 
-func init() {
-	http.HandleFunc("/", handler)
-}
-
 func mustReadFile(path string) []byte {
 	b, err := ioutil.ReadFile(path)
 	if err != nil {
